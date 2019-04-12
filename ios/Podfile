@@ -5,8 +5,23 @@ target 'rnasyncbug' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
 
-  # Pods for rnasyncbug
-
+	# Pods for rnasyncbug
+	pod 'yoga', path: '../node_modules/react-native/ReactCommon/yoga'
+	pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
+	pod 'React', path: '../node_modules/react-native', subspecs: [
+    'Core',
+    'cxxreact',
+    'CxxBridge',
+    'DevSupport',
+    'RCTText',
+    'RCTImage',
+    'RCTLinkingIOS',
+    'RCTNetwork',
+    'RCTActionSheet',
+    'RCTAnimation',
+    'RCTWebSocket',
+    'RCTGeolocation'
+  ]
   pod 'react-native-async-storage', :path => '../node_modules/@react-native-community/async-storage'
 
 end
